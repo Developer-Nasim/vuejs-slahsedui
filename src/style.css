@@ -45,7 +45,7 @@ h2 > span,
 h3 > span,
 h4 > span,
 h5 > span,
-h6 > span{ 
+h6 > span,.gradienTxt{ 
     background: var(--gradientBg);
     background-clip: text;
     -webkit-background-clip: text;

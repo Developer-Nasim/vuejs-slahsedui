@@ -1,5 +1,4 @@
-<script setup>
-    import ItemPoint from '../../Others/ItemPoint.vue/ItemPoint.vue';
+<script setup> 
     import HeroContent from './HeroContent.vue';
     import Ovarlay from '../../../assets/img/ovarlay.png' 
     import Frame from '../../../assets/img/icons/frame.png'

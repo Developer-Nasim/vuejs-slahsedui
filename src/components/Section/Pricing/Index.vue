@@ -7,22 +7,14 @@ import Testimonial_item from './Testimonial_item.vue';
 import Avatar from '../../../assets/img/testimonial_user1.png'
 import TestimonialBg from '../../../assets/img/avtar_testimonial.png'
 import Star from '../../../assets/img/icons/star.png'
+import Switch from '../../Others/Switch.vue';
+import PricingItem from './PricingItem.vue';
 
-
-  // Import Swiper Vue.js components
-  import { Swiper, SwiperSlide } from 'swiper/vue';
-
-  // Import Swiper styles
-  import 'swiper/css';
-   
-  // import required modules
-  import { Pagination,Autoplay } from 'swiper/modules';
-  const modules = [Pagination,Autoplay]
+  
 
 </script>
 <template>
-    <section class="testimonial-section">
-        <img :src="TestimonialBg" alt=""/>
+    <section class="pricing-section"> 
         <div class="container">
             <div class="row">
                 <div class="col-lg-12 text-center">
@@ -34,7 +26,18 @@ import Star from '../../../assets/img/icons/star.png'
                     </div>
                 </div>
                 <div class="col-lg-12">
-                    <div class="testimonial-wrp"> 
+                    <div class="pricings-wrap"> 
+                        <div class="month_to_year">
+                            <p class="gradienTxt">Monthly</p>
+                            <Switch/>
+                            <p>Yearly <span>50% off</span></p>
+                        </div>
+                        <div class="all-pricings">
+                            <PricingItem/>
+                            <PricingItem/>
+                            <PricingItem/>
+                        </div>
+                        <p>Not sure what to choose ? <a href="#">contact us</a> for custom packages</p>
                     </div>
                 </div>
             </div>
