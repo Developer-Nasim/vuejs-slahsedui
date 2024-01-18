@@ -1,6 +1,6 @@
 <script setup>
 
-    import DemoImg from '../../../assets/img/interface/subscription.png'
+    import DemoImg from '../../../assets/img/downloadfrom.png'
     import Store from '../../../assets/img/storeicons/appstore.png'
     import Store2 from '../../../assets/img/storeicons/appstore.png'
 
@@ -25,7 +25,7 @@ const DownloadData = {
 
 </script>
 <template>
-    <section class="interface-section"> 
+    <section class="download-section"> 
         <div class="container">
             <div class="row">
                 <div class="col-lg-12">
@@ -37,5 +37,12 @@ const DownloadData = {
 </template>
 
 <style scoped> 
+section.download-section {
+    margin: 100px 0;
+}
+
+section.download-section .container {
+    max-width: 1340px;
+}
 
 </style>

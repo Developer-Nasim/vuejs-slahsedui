@@ -4,8 +4,7 @@ import SectionTitle from '../../Others/SectionTitle.vue';
 import WatchVideo from './WatchVideo.vue'; 
 
 import Icon from '../../../assets/img/storeicons/android.png'
-import Icon2 from '../../../assets/img/storeicons/apple.png'
-import PlayIcon from '../../../assets/img/icons/play.png' 
+import Icon2 from '../../../assets/img/storeicons/apple.png' 
 
 import Step from '../../../assets/img/blog.png'
 import Step2 from '../../../assets/img/step2.png'
@@ -16,6 +15,7 @@ import VideoBg from '../../../assets/img/blog2.png'
  
 import SingleStep from './SingleStep.vue';
 
+ 
 
  
 
@@ -41,7 +41,7 @@ import SingleStep from './SingleStep.vue';
                             </ul>
                             <p>Download App either for Windows, Mac or Android</p>
                         </SingleStep>
-                        <SingleStep :img="Step2" heading="Create account" step_num="02" classes="left_img">
+                        <SingleStep :img="Step2" heading="Create account" step_num="02" left_mode="left_img">
                             <p><b>14 days free trial</b></p>
                             <p>Sign up free for App account. One account for all devices.</p>
                         </SingleStep>
@@ -62,7 +62,31 @@ import SingleStep from './SingleStep.vue';
 </template>
 
 <style scoped>
+section.how-it-section {
+    padding-top: 100px;
+    margin-top: 100px;
+    position: relative;
+}
 
+section.how-it-section {
+    padding-top: 100px;
+    margin-top: 100px;
+    position: relative;
+}
+
+section.how-it-section:after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: -2;
+    border-radius: 30px;
+    background: #FFF;
+    box-shadow: 0px 4px 30px 0px rgba(255, 133, 75, 0.38);
+    width: 98%;
+    height: 90%;
+}
 .steps {
     position: relative;
     margin-top: 40px;

@@ -3,6 +3,7 @@ import Header from '../../components/Others/Header/Header.vue'
 import Hero from '../../components/Section/Hero/Hero.vue'; 
 import Brands from '../../components/Section/Brands/Index.vue';
 import Features from '../../components/Section/Features/Index.vue';
+import Benifits from '../../components/Section/Benifits/Index.vue';
 import HowItWork from '../../components/Section/HowItWork/Index.vue';
 import Testimonial from '../../components/Section/Testimonial/Index.vue';
 import Pricing from '../../components/Section/Pricing/Index.vue';
@@ -18,12 +19,13 @@ import Footer from '../../components/Section/Footer/Index.vue';
     <Hero/>
     <Brands/>
     <Features />
+    <Benifits />
     <HowItWork />
     <Testimonial />
-
     <Pricing />
     <Faq />
     <Interface />
+    <Download />
     <Blog />
     <NewsLetter />
     <Footer />

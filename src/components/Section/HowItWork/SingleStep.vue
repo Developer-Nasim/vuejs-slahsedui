@@ -7,13 +7,13 @@ defineProps({
     img:{type:String,required:true},
     heading:{type:String,required:true},
     step_num:{type:String,required:true},
-    classes:{type:String,required:false}
+    left_mode:{type:String,required:false}
 })
  
 
 </script>
 <template>
-    <div class="single_step">
+    <div :class="`single_step ${left_mode}`">
         <div class="step_wrp">
             <h5>{{heading}}</h5>
             <slot/>

@@ -1,17 +1,15 @@
 <script setup> 
-    defineProps({
-        num:{type: String, required:true},
-        title:{type: String, required:true},
-        content:{type: String, required:true}
+    defineProps({ 
+        contents:{type: Object, required:true}
     })
 </script>
 <template>
     <div class="accordion-item"> 
-        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
-            {{title}}
+        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" :data-bs-target="`#flush-collapse${contents.id}`" aria-expanded="false" :aria-controls="`flush-collapse${contents.id}`">
+            {{contents.title}}
         </button> 
-        <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
-            <div class="accordion-body">{{content}}</div>
+        <div :id="`flush-collapse${contents.id}`" class="accordion-collapse collapse" :aria-labelledby="`flush-heading${contents.id}`" data-bs-parent="#accordionFlushExample">
+            <div class="accordion-body">{{contents.content}}</div>
         </div>
     </div> 
 </template>
