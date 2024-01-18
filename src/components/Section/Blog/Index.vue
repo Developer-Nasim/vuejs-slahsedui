@@ -11,17 +11,20 @@ import BlogImg3 from '../../../assets/img/blog3.png'
     {
         img:BlogImg,
         heading: 'Creative ideas on app.',
-        content:'Simply dummy text of the printing and typesetting industry lorem Ipsum has Lorem Ipsum is.'
+        content:'Simply dummy text of the printing and typesetting industry lorem Ipsum has Lorem Ipsum is.',
+        link:'#'
     },
     {
         img:BlogImg2,
         heading: 'Creative ideas on app.',
-        content:'Simply dummy text of the printing and typesetting industry lorem Ipsum has Lorem Ipsum is.'
+        content:'Simply dummy text of the printing and typesetting industry lorem Ipsum has Lorem Ipsum is.',
+        link:'#'
     },
     {
         img:BlogImg3,
         heading: 'Creative ideas on app.',
-        content:'Simply dummy text of the printing and typesetting industry lorem Ipsum has Lorem Ipsum is.'
+        content:'Simply dummy text of the printing and typesetting industry lorem Ipsum has Lorem Ipsum is.',
+        link:'#'
     }
   ]
 
@@ -38,16 +41,18 @@ import BlogImg3 from '../../../assets/img/blog3.png'
                         </SectionTitle>
                     </div>
                 </div>
-                <div class="col-lg-12">
-                    <div class="all-blogs"> 
-                        <BlogItem v-for="blog in Blogs" :content="blog"/>
-                    </div>
-                </div>
             </div>
+                <div class="row"> 
+                    <div class="col-lg-4"  v-for="(blog,i) in Blogs" :key="i">
+                        <BlogItem :content="blog"/>
+                    </div> 
+                </div>
         </div>
     </section>
 </template>
 
 <style scoped> 
-
+section.blog-section .section-title {
+    margin-bottom: 55px;
+}
 </style>

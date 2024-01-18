@@ -26,24 +26,61 @@ import SectionTitle from '../../Others/SectionTitle.vue';
                 <div class="col-lg-12 text-center">
                     <div class="section-title">
                         <SectionTitle>
-                            <h1>Beautifull <span>FAQ</span> interface</h1>
+                            <h1>Beautifull <span>interface</span> </h1>
                             <p>Lorem Ipsum is simply dummy text of the printing and typese tting indus orem Ipsum has beenthe standard dummy.</p>
                         </SectionTitle>
                     </div>
-                </div>
-                <div class="col-lg-12">
-                    <div class="interface-wrap"> 
+                </div> 
+            </div>
+        </div>
+        <div class="container-fluid"> 
+            <div class="interface-wrap"> 
                         <swiper 
+                            :slidesPerView="5"
+                            :spaceBetween="50"
+                            :loop="true"
                             :pagination="{
                                 clickable: true,
                             }"
+                            :centeredSlides="true"
                             :autoplay="{
                                 delay: 2500,
                                 disableOnInteraction: false,
                             }"
                             :modules="modules"
-                            class="HeroSwiper"
+                            class="InterfaceSlider"
+                            :breakpoints="{
+                                '640': {
+                                    slidesPerView: 2,
+                                    spaceBetween: 20,
+                                },
+                                '768': {
+                                    slidesPerView: 4,
+                                    spaceBetween: 40,
+                                },
+                                '1024': {
+                                    slidesPerView: 5,
+                                    spaceBetween: 50,
+                                },
+                            }"
                         >
+                            <swiper-slide>
+                                <div class="interface-item"><img :src="Interface" alt=""/></div>
+                            </swiper-slide> 
+                            <swiper-slide>
+                                <div class="interface-item"><img :src="Interface2" alt=""/></div>
+                            </swiper-slide> 
+                            <swiper-slide>
+                                <div class="interface-item"><img :src="Interface3" alt=""/></div>
+                            </swiper-slide> 
+                            <swiper-slide>
+                                <div class="interface-item"><img :src="Interface4" alt=""/></div>
+                            </swiper-slide> 
+                            <swiper-slide>
+                                <div class="interface-item"><img :src="Interface5" alt=""/></div>
+                            </swiper-slide> 
+
+                            
                             <swiper-slide>
                                 <div class="interface-item"><img :src="Interface" alt=""/></div>
                             </swiper-slide> 
@@ -61,12 +98,27 @@ import SectionTitle from '../../Others/SectionTitle.vue';
                             </swiper-slide> 
                         </swiper>
                     </div>
-                </div>
-            </div>
         </div>
     </section>
 </template>
 
 <style scoped> 
+
+.interface-wrap {
+    margin-top: 50px;
+    margin-bottom: 130px;
+}
+.interface-item {
+    margin: 50px 0; 
+}
+.interface-item img {
+    display: block;
+    width: 100%;
+    transform: scale(.95);
+    transition: .3s;
+}
+.swiper-slide-active .interface-item img {
+    transform: scale(1.13);
+}  
 
 </style>

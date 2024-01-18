@@ -1,16 +1,64 @@
 <script setup>
 
-import SectionTitle from '../../Others/SectionTitle.vue';
-import Testimonial_item from './Testimonial_item.vue';
+import SectionTitle from '../../Others/SectionTitle.vue'; 
  
 
-import Avatar from '../../../assets/img/testimonial_user1.png'
-import TestimonialBg from '../../../assets/img/avtar_testimonial.png'
-import Star from '../../../assets/img/icons/star.png'
+
+import Icon from '../../../assets/img/icons/pricing/pricing.png'
+import Icon2 from '../../../assets/img/icons/pricing/pricing2.png'
+import Icon3 from '../../../assets/img/icons/pricing/pricing3.png'
+
 import Switch from '../../Others/Switch.vue';
 import PricingItem from './PricingItem.vue';
 
-  
+
+const pricings = [
+    {
+        icon:Icon,
+        headings:{
+            heading:"Freemium",
+            subheading:"For the basics",
+        },
+        price: "$0",
+        pricing_features:[
+            "Unlimited access to all promotions.",
+            "Exclusive promotions reserved for Premium and OG subscribers. ",
+            "Priority customer support for OG subscribers"
+        ],
+        highlighted:false,
+        link: '#'
+    },
+    {
+        icon:Icon2,
+        headings:{
+            heading:"Premium",
+            subheading:"For the professionals",
+        },
+        price: "$30",
+        pricing_features:[
+            "Unlimited access to all promotions.",
+            "Exclusive promotions reserved for Premium and OG subscribers. ",
+            "Priority customer support for OG subscribers"
+        ],
+        highlighted:true,
+        link: '#'
+    },
+    {
+        icon:Icon3,
+        headings:{
+            heading:"OG",
+            subheading:"For small team",
+        },
+        price: "$30",
+        pricing_features:[
+            "Unlimited access to all promotions.",
+            "Exclusive promotions reserved for Premium and OG subscribers. ",
+            "Priority customer support for OG subscribers"
+        ],
+        highlighted:false,
+        link: '#'
+    }
+]
 
 </script>
 <template>
@@ -27,17 +75,13 @@ import PricingItem from './PricingItem.vue';
                 </div>
                 <div class="col-lg-12">
                     <div class="pricings-wrap"> 
-                        <div class="month_to_year">
-                            <p class="gradienTxt">Monthly</p>
-                            <Switch/>
-                            <p>Yearly <span>50% off</span></p>
+                        <div class="month_to_year"> 
+                            <Switch/> 
                         </div>
                         <div class="all-pricings">
-                            <PricingItem/>
-                            <PricingItem/>
-                            <PricingItem/>
+                            <PricingItem v-for="(price,index) in pricings" :key="index" :contents="price"/>
                         </div>
-                        <p>Not sure what to choose ? <a href="#">contact us</a> for custom packages</p>
+                        <p>Not sure what to choose ? <a href="#" class="gradienTxt">contact us</a> for custom packages</p>
                     </div>
                 </div>
             </div>
@@ -46,5 +90,32 @@ import PricingItem from './PricingItem.vue';
 </template>
 
 <style scoped> 
+.month_to_year {
+    margin-top: 30px;
+}
 
+
+
+
+
+.all-pricings {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.all-pricings .pricing_item {
+    max-width: 355px;
+    margin-top: 40px;
+}
+
+
+.pricings-wrap {
+    text-align: center;
+}
+
+.pricings-wrap > p {
+    text-align: center;
+    margin-top: 90px;
+}
 </style>

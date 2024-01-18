@@ -34,5 +34,14 @@ import FaqItem from './FaqItem.vue';
 </template>
 
 <style scoped> 
+.container {}
+
+section.faw-section {
+    padding: 100px 0;
+}
+
+.faq-wrap {
+    margin-top: 45px;
+}
 
 </style>

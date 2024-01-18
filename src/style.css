@@ -129,3 +129,10 @@ a,a:hover{
     max-width: 530px;
     margin: auto;
 }
+
+
+/* Padding of navs */
+
+.interface-wrap .swiper-wrapper {
+    padding-bottom: 45px !important;
+}
