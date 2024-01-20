@@ -2,13 +2,17 @@
     defineProps({
         txt:{type: String,required:true},
         href:{type: String,required:false},
-        btype:{type: Boolean,required:false},
+        btype:{type: String,required:false},
     })
 </script>
+
+
 <template>
     <button v-if="btype" :type="btype" class="themeBtn">{{txt}}</button>
-    <a v-else :href="href" class="themeBtn">{{txt}}</a>
+    <router-link v-else :to="href" class="themeBtn">{{txt}}</router-link> 
 </template>
+
+
 <style scoped>
     .themeBtn{
         text-transform: uppercase;

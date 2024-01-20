@@ -1,22 +1,20 @@
 <script setup>
 import Home from './Pages/Home/Home.vue';
+import Referral from './Pages/Referral/index.vue';
+import Signup from './Pages/Signup/index.vue';
+import Login from './Pages/Login/index.vue';
+import Dashboard from './Pages/Dashboard/Referal/index.vue';
 </script>
 
 <template>
-   <Home/>
+   <!-- <Home/> -->
+   <!-- <Referral/> -->
+   <!-- <Signup/> -->
+   <!-- <Login/> -->
+   <!-- <Dashboard/> -->
+   <router-view></router-view>
 </template>
 
 <style scoped>
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.vue:hover {
-  filter: drop-shadow(0 0 2em #42b883aa);
-}
+ 
 </style>

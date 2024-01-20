@@ -10,7 +10,7 @@
             <div class="row"> 
                 <div class="col-lg-12">
                     <div class="header-wrp d-flex align-items-center justify-content-between">
-                        <a href="#" class="logo"><img :src="logo" alt=""></a>
+                        <router-link to="/" class="logo"><img :src="logo" alt=""></router-link>
                         <Nav />
                     </div>
                 </div>

@@ -5,7 +5,7 @@
     })
 </script>
 <template> 
-    <a :href="href" class="storeBtn"><img :src="img" alt=""/></a>
+<router-link :to="href" class="storeBtn"><img :src="img" alt=""/></router-link> 
 </template>
 <style scoped>
     .storeBtn{

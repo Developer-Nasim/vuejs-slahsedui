@@ -13,7 +13,7 @@
 </script>
 
 <template>
-    <li><a :href="href">{{ txt }}</a></li>
+    <li><router-link :to="href">{{ txt }}</router-link></li>
 </template>
 <style scoped>
     nav ul li a{
