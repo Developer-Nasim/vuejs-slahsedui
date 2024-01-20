@@ -9,7 +9,7 @@
         <div>
             <h5>{{content.heading}}</h5>
             <p>{{content.content}}</p>
-            <router-link :class="gradienTxt" :to="content.link">READ MORE</router-link> 
+            <router-link class="gradienTxt" :to="content.link">READ MORE</router-link> 
         </div>
     </div>
 </template>
