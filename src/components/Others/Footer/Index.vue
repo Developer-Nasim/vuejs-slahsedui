@@ -229,8 +229,15 @@ footer {
     max-width: 48%;
     width: 48%; 
 }
-
-
+.footer-widget.second { 
+    flex-wrap: wrap;
+    justify-content: center;
+    text-align: center;
+}
+.footer-widget.second > div{
+    width: 100%;
+    margin-bottom: 30px;
+}
 }
   
 </style>

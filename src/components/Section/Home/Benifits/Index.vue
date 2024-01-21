@@ -218,12 +218,22 @@ section.benifit-section {
  
  /* Tablet screen :768px. */
  @media (min-width: 768px) and (max-width: 991px) {
+    
+.benifit-section .container{
+    max-width: 700px;
+}
+
+
+.benifit_wrap_nums_info {
+    max-width: 100%;
+    width: 100%;
+}
  .benifit_img.with_bgs{
      max-width: 450px;
      margin: auto;
  }
  .num-info-item { 
-     width: 230px;
+     width: 48%;
  }
  .first-benifit-wrap .benifit_img.with_bgs > img.b {
      max-width: 330px;
@@ -258,8 +268,8 @@ section.benifit-section {
      margin: auto;
      margin-bottom: 20px;
  }
- .num-info-item { 
-    width: 140px;
+ .num-info-item {  
+    width: 48%;
     flex-wrap: wrap;
     padding: 10px;
     text-align: center;
@@ -308,7 +318,9 @@ section.benifit-section {
 .benifit_img.with_out_bg img.b2 {
     max-width: 150px;
 }
-
+.info-benift-item{
+    text-align: left;
+}
 
 
 
