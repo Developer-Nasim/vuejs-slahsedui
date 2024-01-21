@@ -3,7 +3,7 @@
     import Ovarlay from '../../../../assets/img/ovarlay.png'  
     
     import Hero from '../../../../assets/img/hero2.png' 
-import Anim from '../../../others/anim.vue';
+    import Anim from '../../../others/Anim.vue';
  
 
 </script>
