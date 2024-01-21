@@ -1,5 +1,5 @@
 <script setup>
-import ItemPoint from '../../../Others/ItemPoint.vue';
+import ItemPoint from '../../../Others/ItemPoint/ItemPoint.vue';
 
  
 
