@@ -37,8 +37,8 @@ import Logo5 from '../../../../assets/img/companies/envato.png'
                 </div>
                 <div class="col-lg-12">
                     <div class="all-brands" v-motion
-                        :initial="{y: 100,opacity: 0}"
-                        :visible="{y: 0,opacity: 1}" 
+                        :initial="{opacity: 0}"
+                        :visible="{opacity: 1}" 
                         :delay="500"
                         :duration="1500"
                     > 

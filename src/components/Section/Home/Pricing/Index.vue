@@ -78,7 +78,7 @@ const pricings = [
                             <Switch/> 
                         </div>
                         <div class="all-pricings">
-                            <PricingItem v-for="(price,index) in pricings" :key="index" :contents="price" v-motion-slide-visible-bottom :delay="(200 * index)"/>
+                            <PricingItem v-for="(price,index) in pricings" :key="index" :contents="price" v-motion-slide-visible-bottom :delay="(300 * index)"/>
                         </div>
                         <p  v-motion-slide-visible-bottom>Not sure what to choose ? <router-link to="#" class="gradienTxt">contact us</router-link> for custom packages</p>
                     </div>

@@ -39,7 +39,7 @@
                     </div>
                 </div>
                 <div class="col-lg-6">
-                    <div class="hero-wrp">
+                    <div class="hero-wrp" v-motion-fade>
                         <div class="hero-img-content">  
                             <img :src="Thumbsup" alt="" class="thumbsup" />
                             <div class="hero_show_items">

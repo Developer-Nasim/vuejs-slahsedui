@@ -74,7 +74,7 @@ function HandleSideBar() {
     <Dashboard>
         <div class="row">
             <div class="col-lg-12">
-                <div class="referrs-wrap" data-aos="fade-up" data-aos-delay="0">
+                <div class="referrs-wrap" v-motion-slide-bottom>
                     <div class="referrs-contents left">
                         <div class="reffers-title"> 
                             <h5>Invite & Earn</h5>
