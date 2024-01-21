@@ -65,7 +65,7 @@ const pricings = [
         <div class="container">
             <div class="row">
                 <div class="col-lg-12 text-center">
-                    <div class="section-title" data-aos="fade-up" data-aos-delay="500">
+                    <div class="section-title" v-motion-slide-visible-bottom>
                         <SectionTitle>
                             <h1>Best & simple <span>pricing</span></h1>
                             <p>Lorem Ipsum is simply dummy text of the printing and typese tting indus orem Ipsum has beenthe standard dummy.</p>
@@ -73,14 +73,14 @@ const pricings = [
                     </div>
                 </div>
                 <div class="col-lg-12">
-                    <div class="pricings-wrap" data-aos="fade-up" data-aos-delay="1500"> 
-                        <div class="month_to_year"> 
+                    <div class="pricings-wrap">
+                        <div class="month_to_year" v-motion-slide-visible-bottom :delay="300"> 
                             <Switch/> 
                         </div>
                         <div class="all-pricings">
-                            <PricingItem v-for="(price,index) in pricings" :key="index" :contents="price"/>
+                            <PricingItem v-for="(price,index) in pricings" :key="index" :contents="price" v-motion-slide-visible-bottom :delay="(200 * index)"/>
                         </div>
-                        <p data-aos="fade-up" data-aos-delay="1400">Not sure what to choose ? <router-link to="#" class="gradienTxt">contact us</router-link> for custom packages</p>
+                        <p  v-motion-slide-visible-bottom>Not sure what to choose ? <router-link to="#" class="gradienTxt">contact us</router-link> for custom packages</p>
                     </div>
                 </div>
             </div>

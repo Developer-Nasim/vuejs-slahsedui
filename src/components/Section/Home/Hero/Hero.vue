@@ -34,7 +34,9 @@
         <div class="container">
             <div class="row align-items-center"> 
                 <div class="col-lg-6">
-                    <HeroContent/>
+                    <div v-motion-slide-left>
+                        <HeroContent/> 
+                    </div>
                 </div>
                 <div class="col-lg-6">
                     <div class="hero-wrp">

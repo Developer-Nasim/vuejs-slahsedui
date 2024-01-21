@@ -34,7 +34,7 @@ import BlogItem from './BlogItem.vue';
         <div class="container">
             <div class="row">
                 <div class="col-lg-12 text-center">
-                    <div class="section-title" data-aos="fade-up" data-aos-delay="500">
+                    <div class="section-title" v-motion-slide-visible-bottom>
                         <SectionTitle>
                             <h1>Read latest <span>story</span></h1>
                             <p>Lorem Ipsum is simply dummy text of the printing and typese tting indus orem Ipsum has beenthe standard dummy.</p>
@@ -42,8 +42,8 @@ import BlogItem from './BlogItem.vue';
                     </div>
                 </div>
             </div>
-                <div class="row" data-aos="fade-in" data-aos-delay="800"> 
-                    <div class="col-lg-4 col-md-6"  v-for="(blog,i) in Blogs" :key="i">
+                <div class="row">
+                    <div class="col-lg-4 col-md-6"  v-for="(blog,i) in Blogs" :key="i" v-motion-slide-visible-bottom :delay="(300 * i)">
                         <BlogItem :content="blog"/>
                     </div> 
                 </div>

@@ -7,7 +7,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-12">
-                    <div class="news-letter-wraps">
+                    <div class="news-letter-wraps" v-motion-pop-visible>
                         <div>
                             <h1>Subscribe newsletter</h1>
                             <p>Be the first to recieve all latest post in your inbox</p>

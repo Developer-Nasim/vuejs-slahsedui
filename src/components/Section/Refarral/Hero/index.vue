@@ -14,12 +14,14 @@
 
         <div class="container">
             <div class="row align-items-center"> 
-                <div class="col-lg-6">     
-                    <HeroContent  data-aos="fade-right" data-aos-delay="0"/>
+                <div class="col-lg-6">
+                    <div v-motion-slide-left>
+                    <HeroContent/>
+                    </div>  
                 </div>
                 <div class="col-lg-6">
                     <div class="hero-wrp">
-                        <div class="hero-img-content">  
+                        <div class="hero-img-content" v-motion-fade-visible>  
                             <img :src="Hero" alt="">
                         </div>
                     </div>

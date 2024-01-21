@@ -176,6 +176,9 @@ defineProps({
     .all-pricings .pricing_item  {
         max-width: 48%; 
     }
+    .pricing_item.highlighted > a ,.pricing_item > a {
+        padding: 14px 34px;
+    }
 
 }
 

@@ -34,7 +34,7 @@ const faqs = [
         <div class="container">
             <div class="row">
                 <div class="col-lg-12 text-center">
-                    <div class="section-title" data-aos="fade-up" data-aos-delay="500">
+                    <div class="section-title" v-motion-slide-visible-bottom>
                         <SectionTitle>
                             <h1><span>FAQ</span> - Frequently Asked Questions</h1>
                             <p>Lorem Ipsum is simply dummy text of the printing and typese tting indus orem Ipsum has beenthe standard dummy.</p>
@@ -42,9 +42,9 @@ const faqs = [
                     </div>
                 </div>
                 <div class="col-lg-12">
-                    <div class="faq-wrap" data-aos="fade-up" data-aos-delay="1000"> 
+                    <div class="faq-wrap"> 
                         <div class="accordion accordion-flush" id="accordionFlushExample">
-                            <FaqItem v-for="(faq, i) in faqs" :key="i" :contents="faq"/>
+                            <FaqItem v-for="(faq, i) in faqs" :key="i" :contents="faq" v-motion-slide-visible-bottom :delay="(300 * i)"/>
                         </div>
                     </div>
                 </div>

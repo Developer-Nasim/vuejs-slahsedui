@@ -25,7 +25,7 @@ import WatchVideo from './WatchVideo.vue';
         <div class="container">
             <div class="row">
                 <div class="col-lg-8 offset-lg-2 text-center">
-                    <SectionTitle data-aos="fade-up" data-aos-delay="400">
+                    <SectionTitle v-motion-slide-visible-bottom>
                         <h1><span>How it works</span> - 3 easy steps</h1>
                         <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry lorem Ipsum has been the industrys standard dummy text ever since the when an unknown printer took a galley of type and. Lorem ipsum dolor sit amet.</p>
                     </SectionTitle>
@@ -34,24 +34,24 @@ import WatchVideo from './WatchVideo.vue';
             <div class="row">
                 <div class="col-lg-12">
                     <div class="steps">
-                        <SingleStep :img="Step" heading="Download app" step_num="01" data-aos="fade-up" data-aos-delay="400">
+                        <SingleStep :img="Step" heading="Download app" step_num="01" v-motion-slide-visible-bottom :delay="300">
                             <ul>
                                 <li><router-link to="#"><img :src="Icon" alt=""></router-link></li>
                                 <li><router-link to="#"><img :src="Icon2" alt=""></router-link></li> 
                             </ul>
                             <p>Download App either for Windows, Mac or Android</p>
                         </SingleStep>
-                        <SingleStep :img="Step2" heading="Create account" step_num="02" left_mode="left_img" data-aos="fade-up" data-aos-delay="800">
+                        <SingleStep :img="Step2" heading="Create account" step_num="02" left_mode="left_img" v-motion-slide-visible-bottom :delay="600">
                             <p><b>14 days free trial</b></p>
                             <p>Sign up free for App account. One account for all devices.</p>
                         </SingleStep>
-                        <SingleStep :img="Step3" heading="Enjoy Excited Discounts" step_num="03" data-aos="fade-up" data-aos-delay="1200">
+                        <SingleStep :img="Step3" heading="Enjoy Excited Discounts" step_num="03" v-motion-slide-visible-bottom :delay="900">
                             <p class="d-flex flex-wrap justify-content-end"><b>14 days free trial </b> <router-link to="#">FAQs</router-link></p>
                             <p>Sign up free for App account. One account for all devices.</p>
                         </SingleStep>
                     </div>
                 </div> 
-                <div class="col-lg-12" data-aos="fade-up" data-aos-delay="1000">
+                <div class="col-lg-12" v-motion-slide-visible-bottom :delay="1200">
                     <WatchVideo :bgImg="VideoBg" heading="Watch video" contents="Let’s see virtually how it works" videolink="#"/>
                 </div>
             </div>

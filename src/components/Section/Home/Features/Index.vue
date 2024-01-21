@@ -38,7 +38,11 @@ const infos = [
         <div class="container-fluid">
             <div class="row">
                 <div class="col-lg-12 text-center">
-                    <div class="section-title" data-aos="fade-up" data-aos-delay="100"> 
+                    <div class="section-title" v-motion
+                        :initial="{y: 100,opacity: 0}"
+                        :visible="{y: 0,opacity: 1}"  
+                        :duration="1500"
+                    > 
                         <SectionTitle>
                             <h1><span>Features</span> that makes app different!</h1>
                             <p>Lorem Ipsum is simply dummy text of the printing and typese tting indus orem Ipsum has beenthe standard dummy.</p>
@@ -48,15 +52,15 @@ const infos = [
                 <div class="col-lg-12">
                     <div class="features-wrp">
                         <div class="feature_items text-end">
-                            <FeatureItem :contents="infos[0]" data-aos="fade-right"/>
-                            <FeatureItem :contents="infos[1]" data-aos="fade-right" data-aos-delay="200"/> 
+                            <FeatureItem :contents="infos[0]" v-motion-slide-visible-left/> 
+                            <FeatureItem :contents="infos[1]" v-motion-slide-visible-left :delay="500"/> 
                         </div>
                         <div class="fimg">
-                            <img :src="Fimg" alt="" data-aos="fade-in" data-aos-delay="200"/>
+                            <img :src="Fimg" alt="" v-motion-fade-visible :delay="200"/>
                         </div>
                         <div class="feature_items">
-                            <FeatureItem :contents="infos[2]" data-aos="fade-left"/>
-                            <FeatureItem :contents="infos[3]" data-aos="fade-left" data-aos-delay="200"/> 
+                            <FeatureItem :contents="infos[2]" v-motion-slide-visible-right/>
+                            <FeatureItem :contents="infos[3]" v-motion-slide-visible-right :delay="500"/> 
                         </div>
                     </div>
                 </div>

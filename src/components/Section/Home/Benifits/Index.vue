@@ -66,7 +66,7 @@ const NumInfos = [
             <div class="first-benifit-wrap"> 
                 <div class="row">
                     <div class="col-lg-6">
-                        <div class="benifit_img with_bgs" data-aos="fade-in" data-aos-delay="0">
+                        <div class="benifit_img with_bgs" v-motion-fade-visible>
                             <img :src="BImg" alt="" class="b moving_position_animatin">
                             <img :src="BImg2" alt="" class="b2 moving_animation">
                             <img :src="BImg3" alt="" class="background">
@@ -74,14 +74,14 @@ const NumInfos = [
                     </div>
                     <div class="col-lg-6">
                         <div class="benifit_wrap">
-                            <SectionTitle data-aos="fade-up" data-aos-delay="200">
+                            <SectionTitle v-motion-slide-visible-bottom>
                                 <h1>Daily Rewards and Coupons for <span>Slashed User</span></h1>
                                 <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry lorem Ipsum has been the industrys standard dummy text ever since the when an unknown printer took a galley of type and. Lorem ipsum dolor sit amet.</p>
                             </SectionTitle>
-                            <div class="benifit_wrap_nums_info" data-aos="fade-in" data-aos-delay="400">
+                            <div class="benifit_wrap_nums_info" v-motion-fade-visible :delay="300">
                                 <NumItem v-for="(Info, i) in NumInfos" :key="i" :content="Info"/>  
                             </div>
-                            <Button href="#" txt="START FREE TRIAL" data-aos="fade-up" data-aos-delay="500"/>
+                            <Button href="#" txt="START FREE TRIAL"  v-motion-fade-visible :delay="600"/>
                         </div>
                     </div> 
                 </div>
@@ -90,21 +90,21 @@ const NumInfos = [
                 <div class="row">
                     <div class="col-lg-6">
                         <div class="benifit_wrap"> 
-                            <div data-aos="fade-up" data-aos-delay="100"> 
+                            <div v-motion-slide-visible-bottom> 
                                 <SectionTitle>
                                     <h1>Beautiful design with <span>modern UI</span></h1>
                                     <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry lorem Ipsum has been the industrys standard dummy text ever since the when an unknown printer took a galley of type and. Lorem ipsum dolor sit amet.</p>
                                 </SectionTitle>
                             </div>
                             <div class="benifit_lists"> 
-                                <InfoItem :content="ListInfos[0]" data-aos="fade-up" data-aos-delay="200"/> 
-                                <InfoItem :content="ListInfos[1]" data-aos="fade-up" data-aos-delay="500"/> 
-                                <InfoItem :content="ListInfos[2]" data-aos="fade-up" data-aos-delay="1000"/> 
+                                <InfoItem :content="ListInfos[0]" v-motion-slide-visible-bottom :delay="300"/> 
+                                <InfoItem :content="ListInfos[1]" v-motion-slide-visible-bottom :delay="600"/> 
+                                <InfoItem :content="ListInfos[2]" v-motion-slide-visible-bottom :delay="900"/> 
                             </div> 
                         </div>
                     </div> 
                     <div class="col-lg-6">
-                        <div class="benifit_img with_out_bg" data-aos="fade-in" data-aos-delay="0">
+                        <div class="benifit_img with_out_bg" v-motion-fade-visible>
                             <img :src="BImg4" alt="" class="b moving_position_animatin">
                             <img :src="BImg5" alt="" class="b2 moving_animation"> 
                         </div>
