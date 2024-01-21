@@ -55,5 +55,11 @@
     -webkit-text-fill-color: transparent;
 }
 
+/* small screen :320px. */
+@media (max-width: 767px) {
+    .itemPoint > span > b {
+        font-size: 20px;
+    }
+}
 
 </style>

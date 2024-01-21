@@ -51,7 +51,7 @@ import WatchVideo from './WatchVideo.vue';
                         </SingleStep>
                     </div>
                 </div> 
-                <div class="col-lg-12" v-motion-slide-visible-bottom :delay="1200">
+                <div class="col-lg-12">
                     <WatchVideo :bgImg="VideoBg" heading="Watch video" contents="Let’s see virtually how it works" videolink="#"/>
                 </div>
             </div>
