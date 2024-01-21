@@ -162,4 +162,32 @@ defineProps({
     background: var(--white);
     border: 2px solid transparent;
 }
+
+ /* Normal screen :992px. */
+ @media (min-width: 992px) and (max-width: 1200px) {
+
+    .pricing_item.highlighted > a {
+        padding: 14px 35px;
+    }
+
+}
+ /* Tablet screen :768px. */
+@media (min-width: 768px) and (max-width: 991px) {
+    .all-pricings .pricing_item  {
+        max-width: 48%; 
+    }
+
+}
+
+
+@media (max-width: 767px) {
+
+    .pricing_item.highlighted > a ,.pricing_item > a {
+        padding: 14px 34px;
+    }
+ 
+}
+
+
+
 </style>

@@ -149,5 +149,18 @@ section.testimonial-section .section-title {
     -webkit-text-fill-color: transparent;
     font-weight: 700;
 } 
+@media (max-width: 767px) {
+
+    section.testimonial-section > img{
+    display: none;
+}
+section.testimonial-section .section-title{
+    margin-bottom: 50px;
+}
+ 
+
+
+
+}
 
 </style>

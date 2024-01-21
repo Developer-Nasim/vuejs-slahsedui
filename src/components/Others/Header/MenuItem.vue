@@ -23,10 +23,13 @@
         display: block;
     } 
     nav ul li:hover a{
-        color: var(--themeBg);
-        /* background: var(--gradientBg);
-        background-clip: text;
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent; */
+        color: var(--themeBg); 
     }
+    /* Normal screen :992px. */
+@media (min-width: 992px) and (max-width: 1200px) {
+    nav ul li a {
+        margin-left: 25px; 
+    }
+
+}
 </style>

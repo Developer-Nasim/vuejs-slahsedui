@@ -38,4 +38,27 @@ import AppStore from '../../../../assets/img/storeicons/appstore.png'
 .hero-btns > a:hover {
     background: var(--Gradient-2, #6199F8);
 }
+
+/* small screen :320px. */
+@media (max-width: 767px) {
+
+    .hero-wrp{
+        text-align: center;
+        margin-bottom: 50px;
+    }
+.hero-btns {
+    justify-content: center;
+}
+.hero-example-users { 
+    justify-content: center;
+    margin-bottom: 45px;
+}
+.hero-wrp h1 { 
+    font-size: 36px;
+    line-height: 42px; 
+    margin-bottom: 15px;
+}
+}
+
+
 </style>

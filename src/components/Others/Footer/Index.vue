@@ -1,16 +1,20 @@
 <script setup>
-import StoreButton from '../../../Others/StoreButton.vue';
-import LogoWhite from '../../../../assets/img/logo-white.png' 
-import GPlay from '../../../../assets/img/storeicons/gplay.png'
-import AppStore from '../../../../assets/img/storeicons/appstore.png'
+import StoreButton from '../../Others/StoreButton.vue';
+import LogoWhite from '../../../assets/img/logo-white.png' 
+import GPlay from '../../../assets/img/storeicons/gplay.png'
+import AppStore from '../../../assets/img/storeicons/appstore.png'
 import SocialItem from './SocialItem.vue' 
+    import Anim from '../../Others/Anim.vue'
  
 </script>
 <template>
     <footer> 
+        <!-- Animation -->
+        <Anim white=""/>
+        
         <div class="container">
             <div class="row">
-                <div class="col-lg-4">
+                <div class="col-lg-4 col-md-3">
                     <div class="footer-widget first">
                         <img :src="LogoWhite" alt="">
                         <router-link to="mailto:support@example.com">support@example.com</router-link>
@@ -34,7 +38,7 @@ import SocialItem from './SocialItem.vue'
                         </div>
                     </div>
                 </div> 
-                <div class="col-lg-5">
+                <div class="col-lg-5 col-md-6">
                     <div class="footer-widget second">
                         <div> 
                             <h4>Useful Links</h4>
@@ -56,11 +60,13 @@ import SocialItem from './SocialItem.vue'
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-3">
+                <div class="col-lg-3 col-md-3">
                     <div class="footer-widget last">
                         <h4>Let’s Try Out</h4>
-                        <StoreButton :img="GPlay" href="#"/>
-                        <StoreButton :img="AppStore" href="#"/>
+                        <div>
+                            <StoreButton :img="GPlay" href="#"/>
+                            <StoreButton :img="AppStore" href="#"/>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -85,6 +91,8 @@ footer {
     background: var(--Main-Gradient, linear-gradient(290deg, #FE5D5D -1.16%, #FF854B 100%));
     color: #fff;
     padding-top: 150px;
+    position: relative;
+    z-index: 2;
 }
 
 .footer-widget {
@@ -134,7 +142,7 @@ footer {
     margin-left: auto;
 }
 
-.footer-widget.last > a {
+.footer-widget.last > div > a {
     border: none;
     max-width: 185px;
     width: 185px;
@@ -155,4 +163,74 @@ footer {
     padding: 15px 0;
     font-size: 15px;
 }
+ 
+/* Tablet screen :768px. */
+@media (min-width: 768px) and (max-width: 991px) {
+.footer-widget.first > a { 
+    margin-bottom: 5px;
+    font-size: 14px;
+}
+.socialmedia { 
+    margin-top: 20px;
+}
+.footer-widget h4 { 
+    margin-bottom: 35px;
+}
+.footer-widget.last > div > a{ 
+    max-width: 165px; 
+}
+
+
+}
+
+ 
+/* small screen :320px. */
+@media (max-width: 767px) {
+    .footer-widget.first {
+    text-align: center;
+}
+
+.footer-widget.first > img {
+    margin: auto;
+}
+
+.socialmedia {
+    justify-content: center;
+    margin-top: 20px;
+    margin-bottom: 30px;
+}
+
+.footer-widget h4 {
+    margin-bottom: 15px;
+}
+
+.footer-widget.second ul li a {
+    margin-bottom: 5px;
+    line-height: 20px;
+}
+
+.footer-widget.last {
+    max-width: 100%;
+    margin: 0;
+    margin-top: 30px;
+    text-align: center;
+}
+.copy-wrap{ 
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    padding: 15px 0; 
+}
+.footer-widget.last > div {
+    display: flex;
+    justify-content: space-between;
+}
+.footer-widget.last > div > a{ 
+    max-width: 48%;
+    width: 48%; 
+}
+
+
+}
+  
 </style>

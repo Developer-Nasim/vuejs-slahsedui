@@ -11,6 +11,7 @@
 
 
     import HeroContent from './HeroContent.vue';
+    import Anim from '../../../Others/Anim.vue'
 
   // Import Swiper Vue.js components
   import { Swiper, SwiperSlide } from 'swiper/vue';
@@ -25,10 +26,14 @@
 
 </script>
 <template>
-    <section class="hero-section mt-5">
+    <section class="hero-section">
+        
+        <!-- Animation -->
+        <Anim/>
+
         <div class="container">
             <div class="row align-items-center"> 
-                <div class="col-lg-6">    
+                <div class="col-lg-6" data-aos="fade-right" data-aos-delay="0">
                     <HeroContent/>
                 </div>
                 <div class="col-lg-6">
@@ -70,6 +75,13 @@
 </template>
 
 <style scoped> 
+section.hero-section {
+    padding-top: 150px;
+    position: relative;
+}
+section.hero-section .anim_line{
+    height: 90%;
+}
 section.hero-section > img {
     display: block;
     width: 100%;
@@ -120,11 +132,7 @@ section.hero-section > img {
     top: 5%;
     right: 11px;
 }
-
-
-
-
-
+ 
 
 .HeroSwiper {
     position: absolute;
@@ -161,6 +169,52 @@ section.hero-section > img {
     background: linear-gradient(290deg, #FE5D5D -1.16%, #FF854B 100%);
 }
 
+  
+/* Tablet screen :768px. */
+@media (min-width: 768px) and (max-width: 991px) {
+
+    .hero-wrp {
+    text-align: center;
+}
+ 
+
+
+
+
+
+}
+
+ 
+/* small screen :320px. */
+@media (max-width: 767px) {
+
+    .hero-wrp {
+    text-align: center;
+}
+.hero-img-content:after { 
+    width: 300px;
+    height: 300px; 
+}
+.hero-img-content{
+    max-width: 225px;
+    width: 225px; 
+}
+.hero-img-content img.thumbsup {
+    bottom: 19%;
+    left: -27px; 
+    max-width: 50px;
+}
+.hero-slider-item { 
+    width: 212px;
+    height: 450px;
+}
+section.hero-section > img  { 
+    margin-top: 50px;
+    height: 130px;
+    object-fit: cover;
+}
+
+}
  
 
 </style>

@@ -27,6 +27,8 @@
 section.news-letter-section {
     margin-top: 100px;
     margin-bottom: -90px;
+    position: relative;
+    z-index: 3;
 }
 .news-letter-wraps {
     padding: 50px;
@@ -76,4 +78,70 @@ section.news-letter-section {
     font-weight: 500;
     height: 53px;
 }
+ 
+/* Tablet screen :768px. */
+@media (min-width: 768px) and (max-width: 991px) {
+.news-letter-wraps div h1{
+    font-size: 28px; 
+}
+.news-letter-wraps div p{
+    line-height: 20px;
+    font-size: 15px;
+}
+.news-letter-wraps form input{
+    width: 250px; 
+    height: 53px; 
+    margin-right: 10px;
+}
+.news-letter-wraps form button{
+    width: 110px; 
+    padding: 0 20.667px 0 20px; 
+    height: 53px;
+}
+.news-letter-wraps {
+    padding: 24px; 
+}
+
+
+
+
+
+}
+
+ 
+/* small screen :320px. */
+@media (max-width: 767px) {
+.news-letter-wraps div h1{
+    font-size: 28px; 
+}
+.news-letter-wraps div p{
+    line-height: 20px;
+    font-size: 15px;
+}
+.news-letter-wraps form input{
+    width: 100%; 
+    height: 45px; 
+    margin-right: 10px;
+}
+.news-letter-wraps form button{
+    width: 90px;
+    padding: 0 10px 0 10px;
+    height: 45px;
+}
+.news-letter-wraps div {
+    margin-right: 0px;
+    margin-bottom: 10px;
+}
+.news-letter-wraps {
+    padding: 24px;
+    flex-wrap: wrap;
+    justify-content: center;
+    text-align: center;
+}
+.news-letter-wraps form{ 
+    width: 100%;
+}
+}
+  
+
 </style>

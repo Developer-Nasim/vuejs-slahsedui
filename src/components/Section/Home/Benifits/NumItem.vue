@@ -36,4 +36,18 @@
     font-weight: 600;
     line-height: 40px;
 }
+/* small screen :320px. */
+@media (max-width: 767px) {
+    .info-benift-item { 
+    text-align: left;
+}
+.num-info-item div {
+    margin-left: 0px;
+    margin-top: 10px;
+    width: 100%;
+}
+.num-info-item div h1 { 
+    line-height: 30px;
+}
+}
 </style>

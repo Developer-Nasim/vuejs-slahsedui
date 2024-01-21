@@ -43,7 +43,7 @@ const faqs = [
                 </div>
                 <div class="col-lg-12">
                     <div class="faq-wrap"> 
-                        <div class="accordion accordion-flush" id="accordionFlushExample">
+                        <div class="accordion accordion-flush" id="accordionFlushExample" data-aos="fade-up">
                             <FaqItem v-for="(faq, i) in faqs" :key="i" :contents="faq"/>
                         </div>
                     </div>

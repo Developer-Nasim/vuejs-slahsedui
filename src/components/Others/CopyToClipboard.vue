@@ -42,6 +42,7 @@ const CopyFromClipboard = () => {
 <style scoped>
 
 .copyCode {
+    max-width: 100%;
     width: max-content;
     margin: auto;
     border-radius: 15px;
@@ -58,8 +59,7 @@ const CopyFromClipboard = () => {
 }
 
 .copyCode input {
-    color: var(--Green, #4BDB8A);
-    margin-right: 45px;
+    color: var(--Green, #4BDB8A); 
     font-weight: 700;
     border: none;
     outline: none;
@@ -70,4 +70,14 @@ const CopyFromClipboard = () => {
 .copyCode  button {
     display: flex;
 }
+
+/* small screen :320px. */
+@media (max-width: 767px) {
+ 
+.copyCode input{
+    max-width: 200px
+}
+
+}
+
 </style>

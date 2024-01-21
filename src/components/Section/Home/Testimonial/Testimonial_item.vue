@@ -44,5 +44,12 @@
     line-height: 25.5px;
     font-size: 15px;
 }
-
+@media (max-width: 767px) {
+ 
+.user_infos > img{
+    width: 70px;
+    height: 70px;
+}
+ 
+}
 </style>

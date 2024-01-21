@@ -43,7 +43,7 @@ import BlogItem from './BlogItem.vue';
                 </div>
             </div>
                 <div class="row"> 
-                    <div class="col-lg-4"  v-for="(blog,i) in Blogs" :key="i">
+                    <div class="col-lg-4 col-md-6"  v-for="(blog,i) in Blogs" :key="i" data-aos="fade-up">
                         <BlogItem :content="blog"/>
                     </div> 
                 </div>
@@ -55,4 +55,5 @@ import BlogItem from './BlogItem.vue';
 section.blog-section .section-title {
     margin-bottom: 55px;
 }
+
 </style>

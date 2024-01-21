@@ -49,4 +49,22 @@
     font-size: 14px;
     font-weight: 600;
 }
+ 
+/* Tablet screen :768px. */
+@media (min-width: 768px) and (max-width: 991px) {
+.single-blog{
+    margin-bottom: 30px;
+}
+
+}
+
+ 
+/* small screen :320px. */
+@media (max-width: 767px) {
+    .single-blog{
+    margin-bottom: 30px;
+}
+ 
+}
+  
 </style>

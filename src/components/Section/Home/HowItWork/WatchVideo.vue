@@ -123,5 +123,17 @@ defineProps({
     opacity: 0;
   }
 }
+  
+/* small screen :320px. */
+@media (max-width: 767px) {
+.watch_video[data-v-8be21ac2] {
+    width: 100%; 
+    padding: 50px 25px; 
+    margin-top: 20px;
+}
+
+
+
  
+}
 </style>

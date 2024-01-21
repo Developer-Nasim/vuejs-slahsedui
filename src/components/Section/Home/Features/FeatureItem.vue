@@ -34,6 +34,14 @@ defineProps({
 }
 
 .feature_item  p {margin-top: 10px;margin-bottom: 0;}
-  
+   
+/* Tablet screen :768px. */
+@media (min-width: 768px) and (max-width: 991px) {
+.feature_item img {
+    max-height: 60px;
+}
+
  
+}
+  
 </style>

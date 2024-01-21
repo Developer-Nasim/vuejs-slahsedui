@@ -50,5 +50,43 @@ defineProps({
     text-align: left;
 }
  
+/* small screen :320px. */
+@media (max-width: 767px) {
+
+
+.single_step{ 
+    margin-bottom: 30px;
+    flex-wrap: wrap;
+}
+.single_step .step_wrp{
+    margin-bottom: 20px;
+}
+.single_step .step_wrp,
+.single_step.left_img .step_wrp{
+    text-align: center;
+    width: 100%;
+}
+.single_step > div{
+    width: 100%;
+}
+.single_step  .itemPoint {
+    position: absolute;
+    top: -80px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 60px;
+    max-width: 60px;
+}
+.single_step  .itemPoint span{
+    font-size: 20px;
+}
+.single_step > div > img {
+    display: block;
+    width: 1000%;
+}
+
+    
+}
  
 </style>

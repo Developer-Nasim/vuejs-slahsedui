@@ -50,6 +50,10 @@
                     :modules="modules"
                     class="InterfaceSlider"
                     :breakpoints="{
+                        '0': {
+                            slidesPerView: 2,
+                            spaceBetween: 20,
+                        },
                         '640': {
                             slidesPerView: 2,
                             spaceBetween: 20,
@@ -120,5 +124,20 @@
 .swiper-slide-active .interface-item img {
     transform: scale(1.13);
 }  
+ 
+/* Tablet screen :768px. */
+@media (min-width: 768px) and (max-width: 991px) {
 
+
+}
+
+ 
+/* small screen :320px. */
+@media (max-width: 767px) {
+.interface-item {
+    margin: 20px 0;
+}
+ 
+}
+  
 </style>

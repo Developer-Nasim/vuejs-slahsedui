@@ -46,8 +46,12 @@ import Logo5 from '../../../../assets/img/companies/envato.png'
                             }"
                             :modules="modules"
                             :breakpoints="{
+                                '0':{
+                                    slidesPerView: 1,
+                                    spaceBetween: 0,
+                                },
                                 '640': {
-                                    slidesPerView: 2,
+                                    slidesPerView: 3,
                                     spaceBetween: 20,
                                 },
                                 '768': {
@@ -90,6 +94,22 @@ import Logo5 from '../../../../assets/img/companies/envato.png'
 } 
 .all-brands {
     margin-top: 40px;
+    text-align: center;
+}
+/* Tablet screen :768px. */
+@media (min-width: 768px) and (max-width: 991px) {
+
+
 }
 
+ 
+/* small screen :320px. */
+@media (max-width: 767px) {
+    .brands-section{
+    padding: 70px 0;
+    padding-bottom: 0;
+} 
+ 
+}
+  
 </style>

@@ -49,15 +49,15 @@ const infos = [
                 <div class="col-lg-12">
                     <div class="features-wrp">
                         <div class="feature_items text-end">
-                            <FeatureItem :contents="infos[0]"/>
-                            <FeatureItem :contents="infos[1]" /> 
+                            <FeatureItem :contents="infos[0]" data-aos="fade-up" data-aos-delay="500"/>
+                            <FeatureItem :contents="infos[1]" data-aos="fade-up" data-aos-delay="1000"/> 
                         </div>
                         <div class="fimg">
                             <img :src="Fimg" alt=""/>
                         </div>
                         <div class="feature_items">
-                            <FeatureItem :contents="infos[2]"/>
-                            <FeatureItem :contents="infos[3]" /> 
+                            <FeatureItem :contents="infos[2]" data-aos="fade-up" data-aos-delay="500"/>
+                            <FeatureItem :contents="infos[3]" data-aos="fade-up" data-aos-delay="1000"/> 
                         </div>
                     </div>
                 </div>
@@ -112,5 +112,70 @@ const infos = [
     margin-bottom: 40px;
     
 }
+ /* Normal screen :992px. */
+@media (min-width: 992px) and (max-width: 1200px) {
+    .features-wrp:after{
+        bottom: 2.5%;
+    } 
+
+
+
+}
+ /* Tablet screen :768px. */
+@media (min-width: 768px) and (max-width: 991px) {
+.features-wrp {
+    padding: 0px 30px;
+    align-items: center;
+}
+.features-wrp:after {
+    height: 100%;
+}
+.features-wrp .fimg  { 
+    margin: 0 40px;
+}
+.feature_item  {
+    margin-top: 0; 
+    margin: 40px 0;
+    text-align: center;
+}
+
  
+}
+  
+/* small screen :320px. */
+@media (max-width: 767px) {
+    .features-wrp .fimg{
+        display: none;
+    }
+.features-wrp {
+    padding: 30px;
+    padding-bottom: 60px;
+}
+
+.features-wrp:after {
+    height: 100%;
+}
+
+.features-wrp {
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.feature_item  {
+    margin-top: 0; 
+    margin: 40px 0;
+    text-align: center;
+}
+.feature_items{
+    margin: 0;
+}
+.feature_item:last-child{
+    margin-bottom: 0;
+}
+
+
+
+
+
+}
+  
 </style>

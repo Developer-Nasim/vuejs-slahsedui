@@ -34,18 +34,18 @@ import WatchVideo from './WatchVideo.vue';
             <div class="row">
                 <div class="col-lg-12">
                     <div class="steps">
-                        <SingleStep :img="Step" heading="Download app" step_num="01">
+                        <SingleStep :img="Step" heading="Download app" step_num="01" data-aos="fade-up" data-aos-delay="500">
                             <ul>
                                 <li><router-link to="#"><img :src="Icon" alt=""></router-link></li>
                                 <li><router-link to="#"><img :src="Icon2" alt=""></router-link></li> 
                             </ul>
                             <p>Download App either for Windows, Mac or Android</p>
                         </SingleStep>
-                        <SingleStep :img="Step2" heading="Create account" step_num="02" left_mode="left_img">
+                        <SingleStep :img="Step2" heading="Create account" step_num="02" left_mode="left_img" data-aos="fade-up" data-aos-delay="1000">
                             <p><b>14 days free trial</b></p>
                             <p>Sign up free for App account. One account for all devices.</p>
                         </SingleStep>
-                        <SingleStep :img="Step3" heading="Enjoy Excited Discounts" step_num="03">
+                        <SingleStep :img="Step3" heading="Enjoy Excited Discounts" step_num="03" data-aos="fade-up" data-aos-delay="1500">
                             <p class="d-flex flex-wrap justify-content-end"><b>14 days free trial </b> <router-link to="#">FAQs</router-link></p>
                             <p>Sign up free for App account. One account for all devices.</p>
                         </SingleStep>
@@ -54,7 +54,7 @@ import WatchVideo from './WatchVideo.vue';
             </div>
             <div class="row">
                 <div class="col-lg-12">
-                    <WatchVideo :bgImg="VideoBg" heading="Watch video" contents="Let’s see virtually how it works" videolink="#"/>
+                    <WatchVideo :bgImg="VideoBg" heading="Watch video" contents="Let’s see virtually how it works" videolink="#" data-aos="fade-up" data-aos-delay="2000"/>
                 </div>
             </div>
         </div>
@@ -160,7 +160,26 @@ section.how-it-section:after {
     left: 0;
     background: linear-gradient(290deg, #FE5D5D -1.16%, #FF854B 100%);
 }
+/* small screen :320px. */
+@media (max-width: 767px) {
+    .steps:after, .steps:before{
+        display: none;
+    }
+    .step_wrp > ul{
+        justify-content: center;
+    }
+    .single_step { 
+        margin-top: 120px;
+        margin-bottom: 0;
+    }
+    .itemPoint > span > b { 
+        font-size: 22px; 
+    }
+    section.how-it-section {
+        padding-top: 50px; 
+    }
 
+}
 
   
 </style>

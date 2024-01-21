@@ -129,4 +129,46 @@ a.logo {
     width: 12px;
     margin-right: 3px;
 }
+
+/* small screen :320px. */
+@media (max-width: 767px) {
+
+    .header-wraped {
+    flex-wrap: wrap;
+}
+ 
+
+.header-wraped > a {
+    width: 130px;
+    margin: auto;
+    margin-bottom: 15px;
+}
+
+.header-right-wraps {
+    margin-left: 0;
+    width: 100%;
+}
+.menus > a {
+    font-size: 13px;
+    line-height: 16px;
+}
+.loggedininfos > button {
+    margin-right: 10px;
+    max-width: 22px;
+}
+.avatarInfos h5{
+    font-size: 16px; 
+    margin-bottom: 3px;
+}
+.avatarInfos > img[data-v-e9f1d78c] {
+    width: 45px;
+    height: 45px; 
+    margin-left: 8px;
+}
+
+
+ 
+}
+
+
 </style>

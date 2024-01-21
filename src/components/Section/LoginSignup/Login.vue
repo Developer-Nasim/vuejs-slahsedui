@@ -51,5 +51,32 @@ form input {
     outline: none;
     margin-top: 20px;
 }
+
+
+
+ /* small screen :320px. */
+@media (max-width: 767px) {
  
+form > div  {
+    padding: 30px 25px;
+}
+form input { 
+    height: 50px;
+    padding: 15.5px 14px;
+    border-radius: 8px; 
+    margin-top: 15px;
+}
+form button  { 
+    margin-top: 25px;
+    width: 240px;
+} 
+
+
+
+}
+
+
+
+
+
 </style>

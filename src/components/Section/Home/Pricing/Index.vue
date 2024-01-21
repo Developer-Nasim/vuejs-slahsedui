@@ -73,7 +73,7 @@ const pricings = [
                     </div>
                 </div>
                 <div class="col-lg-12">
-                    <div class="pricings-wrap"> 
+                    <div class="pricings-wrap" data-aos="fade-up" data-aos-delay="1500"> 
                         <div class="month_to_year"> 
                             <Switch/> 
                         </div>
@@ -117,4 +117,26 @@ const pricings = [
     text-align: center;
     margin-top: 90px;
 }
+
+ /* Normal screen :992px. */
+ @media (min-width: 992px) and (max-width: 1200px) {
+    .all-pricings .pricing_item {
+    max-width: 320px; 
+}
+
+
+}
+
+
+@media (max-width: 767px) {
+    .all-pricings .pricing_item  {
+        max-width: 100%; 
+        width: 100%;
+    }
+    .all-pricings { 
+        justify-content: center;
+    }
+}
+
+
 </style>

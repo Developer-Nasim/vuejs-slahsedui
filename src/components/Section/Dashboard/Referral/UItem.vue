@@ -73,5 +73,20 @@ defineProps({
 .ulist.accepted .ulist-content b {
     color: var(--Green, #4BDB8A);
 }
+/* small screen :320px. */
+@media (max-width: 767px) {
+    
+    .ulist-content h6 {
+        font-size: 15px;
+    }
+     .ulist-content b{ 
+    font-size: 12px; 
+    line-height: 15px;
+}
+.ulist-content h6 {
+    font-size: 15px;
+}
 
+
+}
 </style>

@@ -51,4 +51,24 @@ defineProps({
     margin-right: 20px;
 }
  
+
+
+
+ /* small screen :320px. */
+ @media (max-width: 767px) {
+.more_joining_option > a { 
+    height: 50px;
+    padding: 11px 15px 10px 15px; 
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+.more_joining_option > a img {
+    margin-right: 10px;
+}
+
+}
+
+
+
+
 </style>

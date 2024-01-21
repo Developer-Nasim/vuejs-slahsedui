@@ -19,8 +19,8 @@ import Logo from '../../assets/img/logo-white.png'
 
                     </div>
                 </div>
-                <div class="col-lg-6 offset-lg-3 text-center">
-                    <div class="login_signup_form">
+                <div class="col-lg-6 col-md-8 offset-lg-3 offset-md-2 text-center">
+                    <div class="login_signup_form" data-aos="fade-up">
                         <slot/>
                     </div>
                 </div>
@@ -71,4 +71,28 @@ section.login_signup > img {
     background: #FFF;
     box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.33);
 } 
+ 
+/* Tablet screen :768px. */
+@media (min-width: 768px) and (max-width: 991px) {
+section.login_signup { 
+    padding: 45px 0 70px 0;
+}
+
+}
+
+ 
+/* small screen :320px. */
+@media (max-width: 767px) {
+
+section.login_signup { 
+    padding: 45px 0 50px 0;
+}
+ 
+ 
+}
+ 
+
+
+
+
 </style>

@@ -1,5 +1,6 @@
 <script setup>
 
+import { onMounted } from 'vue';
     import DemoImg from '../../../../assets/img/downloadfrom.png'
     import Store from '../../../../assets/img/storeicons/appstore.png'
     import Store2 from '../../../../assets/img/storeicons/appstore.png'
@@ -23,6 +24,24 @@ const DownloadData = {
 
 
 
+onMounted(()=>{
+    const TargetELement = document.querySelector('.download-section')
+    if (TargetELement) { 
+        window.addEventListener('scroll', (e) => {
+            const fromTop = TargetELement.offsetTop
+            const scrolled = window.scrollY
+            if ((fromTop - (TargetELement.clientHeight)) < scrolled && (fromTop+(TargetELement.clientHeight/2)) > scrolled) {
+                TargetELement.classList.add('highlited')
+            }else{
+                if (TargetELement.classList.contains('highlited')) {
+                    TargetELement.classList.remove('highlited')
+                }
+            }
+        })
+    }
+})
+
+
 </script>
 <template>
     <section class="download-section"> 
@@ -39,8 +58,27 @@ const DownloadData = {
 <style scoped> 
 section.download-section {
     margin: 100px 0;
+    position: relative;
+    z-index: 99;
 }
-
+section.download-section:after {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #851700;
+    z-index: 1;
+    visibility: hidden;
+    opacity: 0;
+    transition: .3s;
+    z-index: -1;
+}
+section.download-section.highlited:after{
+    opacity: .7;
+    visibility: visible;
+}
 section.download-section .container {
     max-width: 1340px;
 }

@@ -74,7 +74,7 @@ function HandleSideBar() {
     <Dashboard>
         <div class="row">
             <div class="col-lg-12">
-                <div class="referrs-wrap">
+                <div class="referrs-wrap" data-aos="fade-up" data-aos-delay="0">
                     <div class="referrs-contents left">
                         <div class="reffers-title"> 
                             <h5>Invite & Earn</h5>
@@ -230,6 +230,7 @@ section.dashboard-area {margin-top: -170px;}
 
 .discount-title p {
     font-size: 13px;
+    line-height: 16px;
     font-weight: 500;
     color: #000;
 }
@@ -341,6 +342,7 @@ button.benifit_of_reffars > div {
 .status_filters {
     display: flex;
     align-items: center;
+    flex-wrap: wrap;
 }
 
 .status_filters button {
@@ -350,7 +352,9 @@ button.benifit_of_reffars > div {
     position: relative;
     margin-right: 15px;
 }
-
+.status_filters button:last-child{
+    margin-right: 0;
+}
 .status_filters button.active {
     background: var(--Black, #000);
     color: #fff;
@@ -362,6 +366,54 @@ button.benifit_of_reffars > div {
 }
 
 
+/* small screen :320px. */
+@media (max-width: 767px) {
+     
+
+
+
+
+
+
+
+
+
+
+.referrs-wrap {
+    flex-wrap: wrap;
+}
+
+.referrs-wrap > div {
+    width: 100%;
+}
+.discount-title {
+    padding: 12px 15px; 
+}
+.discount-title > div > b { 
+    margin: 0 4px;
+}
+.rest_contents {
+    padding: 15px 10px;
+}
+.reffaras_proggress{ 
+    padding: 15px 15px;
+}
+.rf_proggress { 
+    height: 7px; 
+    margin: 5px 0 5px 0;
+}
+.reffaras_proggress p {
+    font-size: 11px; 
+    line-height: 14px; 
+}
+.status_filters button {
+    padding: 8px 12px; 
+}
+
+
+
+ 
+}
 
 
 
