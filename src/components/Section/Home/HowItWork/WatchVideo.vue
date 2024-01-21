@@ -1,5 +1,8 @@
 <script setup> 
+import {ref} from 'vue'
 import PlayIcon from '../../../../assets/img/icons/play.png' 
+
+
 
 defineProps({ 
     bgImg:{type:String,required:true},
@@ -7,6 +10,8 @@ defineProps({
     contents:{type:String,required:true},
     videolink:{type:String,required:true},
 })
+
+let showIframe= ref(false)
  
 
 </script>
@@ -14,13 +19,28 @@ defineProps({
     <div class="watch_video">
         <img :src="bgImg" alt=""/>
         <div class="watch_video_wrp"> 
-            <button type="button"><img :src="PlayIcon" alt=""></button>
+            <button type="button" data-bs-toggle="modal" data-bs-target="#staticBackdrop" @click="showIframe = true"><img :src="PlayIcon" alt=""></button>
             <div>
                 <h6>{{contents}}</h6>
                 <h2>{{heading}}</h2>
             </div>
         </div>
+    </div> 
+
+    <!-- Modal -->
+    <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content"> 
+                <div class="modal-body">
+                    <button type="button" data-bs-dismiss="modal" @click="showIframe = false">x</button>
+                    <iframe v-if="showIframe" width="560" height="315" src="https://www.youtube.com/embed/D0UnqGm_miA?si=BKsgETr56mbSu5Jd&amp;controls=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                </div> 
+            </div>
+        </div>
     </div>
+
+
+
 </template>
 
 <style scoped>
@@ -124,16 +144,65 @@ defineProps({
   }
 }
   
-/* small screen :320px. */
-@media (max-width: 767px) {
-.watch_video[data-v-8be21ac2] {
-    width: 100%; 
-    padding: 50px 25px; 
-    margin-top: 20px;
+
+ 
+.modal-dialog {
+    max-width: 768px;
+}
+.modal-content {
+    border: none;
+    background: none;
+}
+
+.modal-body {
+    padding: 0;
+    text-align: right;
+}
+
+.modal-body iframe {
+    width: 100%;
+    height: 400px;
+}
+
+.modal-body button {
+    background: red;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    font-size: 24px;
+    font-family: cursive;
+    padding: 0;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 7px;
+    margin-bottom: 10px;
+    margin-left: auto;
 }
 
 
 
+
+/* small screen :320px. */
+@media (max-width: 767px) {
+.watch_video {
+    width: 100%; 
+    padding: 50px 25px; 
+    margin-top: 20px;
+}
+.modal-dialog {
+    max-width: 90%;
+}
+.modal.show .modal-dialog {
+    transform: none;
+    margin: auto;
+    margin-top: 15px;
+}
+
+.modal-body iframe { 
+    height: 300px;
+}
  
 }
 </style>

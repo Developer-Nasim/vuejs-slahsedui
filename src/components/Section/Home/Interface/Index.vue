@@ -137,7 +137,16 @@
 .interface-item {
     margin: 20px 0;
 }
- 
+.interface-wrap{
+    margin: auto;
+    margin-top: 50px;
+    margin-bottom: 130px;
+    max-width: 300px;
+}
+
+
+
+
 }
   
 </style>

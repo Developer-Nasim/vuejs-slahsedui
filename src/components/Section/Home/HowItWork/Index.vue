@@ -66,6 +66,7 @@ section.how-it-section {
     padding-top: 100px;
     margin-top: 100px;
     position: relative;
+    overflow: hidden;
 }
 
 section.how-it-section {
@@ -178,7 +179,9 @@ section.how-it-section:after {
     section.how-it-section {
         padding-top: 50px; 
     }
-
+    .single_step .step_wrp p{
+        justify-content: center !important;
+    }
 }
 
   
