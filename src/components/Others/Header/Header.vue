@@ -1,7 +1,7 @@
 <script setup>
     import { onMounted,ref } from 'vue';
     import Nav from './Nav.vue';
-    import logo from '../../../assets//img/logo.png' 
+    import logo from '../../../assets/img/logo.png' 
     let ShowMenu = ref(false)
 
     onMounted(()=>{
