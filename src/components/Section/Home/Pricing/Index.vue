@@ -65,7 +65,7 @@ const pricings = [
         <div class="container">
             <div class="row">
                 <div class="col-lg-12 text-center">
-                    <div class="section-title">
+                    <div class="section-title" data-aos="fade-up" data-aos-delay="500">
                         <SectionTitle>
                             <h1>Best & simple <span>pricing</span></h1>
                             <p>Lorem Ipsum is simply dummy text of the printing and typese tting indus orem Ipsum has beenthe standard dummy.</p>
@@ -80,7 +80,7 @@ const pricings = [
                         <div class="all-pricings">
                             <PricingItem v-for="(price,index) in pricings" :key="index" :contents="price"/>
                         </div>
-                        <p>Not sure what to choose ? <router-link to="#" class="gradienTxt">contact us</router-link> for custom packages</p>
+                        <p data-aos="fade-up" data-aos-delay="1400">Not sure what to choose ? <router-link to="#" class="gradienTxt">contact us</router-link> for custom packages</p>
                     </div>
                 </div>
             </div>

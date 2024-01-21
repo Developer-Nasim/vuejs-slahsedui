@@ -73,15 +73,15 @@ const NumInfos = [
                         </div>
                     </div>
                     <div class="col-lg-6">
-                        <div class="benifit_wrap"> 
-                            <SectionTitle>
+                        <div class="benifit_wrap">
+                            <SectionTitle data-aos="fade-up" data-aos-delay="200">
                                 <h1>Daily Rewards and Coupons for <span>Slashed User</span></h1>
                                 <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry lorem Ipsum has been the industrys standard dummy text ever since the when an unknown printer took a galley of type and. Lorem ipsum dolor sit amet.</p>
                             </SectionTitle>
-                            <div class="benifit_wrap_nums_info" data-aos="fade-in" data-aos-delay="500">
-                                <NumItem v-for="(Info, i) in NumInfos" :key="i" :content="Info"/> 
+                            <div class="benifit_wrap_nums_info" data-aos="fade-in" data-aos-delay="400">
+                                <NumItem v-for="(Info, i) in NumInfos" :key="i" :content="Info"/>  
                             </div>
-                            <Button href="#" txt="START FREE TRIAL" data-aos="fade-in" data-aos-delay="1000"/>
+                            <Button href="#" txt="START FREE TRIAL" data-aos="fade-up" data-aos-delay="500"/>
                         </div>
                     </div> 
                 </div>
@@ -90,12 +90,16 @@ const NumInfos = [
                 <div class="row">
                     <div class="col-lg-6">
                         <div class="benifit_wrap"> 
-                            <SectionTitle>
-                                <h1>Beautiful design with <span>modern UI</span></h1>
-                                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry lorem Ipsum has been the industrys standard dummy text ever since the when an unknown printer took a galley of type and. Lorem ipsum dolor sit amet.</p>
-                            </SectionTitle>
-                            <div class="benifit_lists">
-                                <InfoItem v-for="(Info, i) in ListInfos" :key="i" :content="Info" data-aos="fade-up" data-aos-delay="200"/> 
+                            <div data-aos="fade-up" data-aos-delay="100"> 
+                                <SectionTitle>
+                                    <h1>Beautiful design with <span>modern UI</span></h1>
+                                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry lorem Ipsum has been the industrys standard dummy text ever since the when an unknown printer took a galley of type and. Lorem ipsum dolor sit amet.</p>
+                                </SectionTitle>
+                            </div>
+                            <div class="benifit_lists"> 
+                                <InfoItem :content="ListInfos[0]" data-aos="fade-up" data-aos-delay="200"/> 
+                                <InfoItem :content="ListInfos[1]" data-aos="fade-up" data-aos-delay="500"/> 
+                                <InfoItem :content="ListInfos[2]" data-aos="fade-up" data-aos-delay="1000"/> 
                             </div> 
                         </div>
                     </div> 

@@ -24,7 +24,7 @@ import Logo5 from '../../../../assets/img/companies/envato.png'
         <div class="container">
             <div class="row">
                 <div class="col-lg-12 text-center">
-                    <div class="section-title"> 
+                    <div class="section-title" data-aos="fade-up" data-aos-delay="100"> 
                         <SectionTitle>
                             <h1>Trusted by <span>150+</span> companies</h1>
                             <p>Lorem Ipsum is simply dummy text of the printing and typese tting indus orem Ipsum has beenthe standard dummy.</p>
@@ -32,7 +32,7 @@ import Logo5 from '../../../../assets/img/companies/envato.png'
                     </div>
                 </div>
                 <div class="col-lg-12">
-                    <div class="all-brands">
+                    <div class="all-brands" data-aos="fade-up" data-aos-delay="200">
                         <swiper 
                             :pagination="{
                                 clickable: true,

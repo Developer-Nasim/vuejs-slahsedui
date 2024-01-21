@@ -34,8 +34,15 @@ import MenuItem from './MenuItem.vue';
         width: 100%;
         height: 100%;
         border-radius: 42px;
-        z-index: -1;
+        z-index: -1; 
+    }
+
+    nav > a:before {
         animation: pulse-blue-medium-sm 3.5s infinite;
+    }
+    nav > a:after {
+        animation: pulse-blue-small-sm 3.5s infinite;
+        animation-delay: .5s;
     }
     @keyframes pulse-blue-medium-sm {
         0% {
@@ -47,6 +54,28 @@ import MenuItem from './MenuItem.vue';
             box-shadow: 0 0 0 20px transparent
         }
     }
+@keyframes pulse-blue-small-sm {
+  0% {
+    box-shadow: 0 0 0 0 rgba(107, 73, 242, 0.7);
+  }
+
+  100%,
+  30% {
+    box-shadow: 0 0 0 12px transparent
+  }
+}
+
+@keyframes pulse-blue-medium-sm {
+  0% {
+    box-shadow: 0 0 0 0 rgba(107, 73, 242, 0.4);
+  }
+
+  100%,
+  30% {
+    box-shadow: 0 0 0 20px transparent
+  }
+}
+
 /* Normal screen :992px. */
 @media (min-width: 992px) and (max-width: 1200px) {
  

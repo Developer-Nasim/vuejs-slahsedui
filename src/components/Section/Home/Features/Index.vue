@@ -38,7 +38,7 @@ const infos = [
         <div class="container-fluid">
             <div class="row">
                 <div class="col-lg-12 text-center">
-                    <div class="section-title"> 
+                    <div class="section-title" data-aos="fade-up" data-aos-delay="100"> 
                         <SectionTitle>
                             <h1><span>Features</span> that makes app different!</h1>
                             <p>Lorem Ipsum is simply dummy text of the printing and typese tting indus orem Ipsum has beenthe standard dummy.</p>
@@ -48,15 +48,15 @@ const infos = [
                 <div class="col-lg-12">
                     <div class="features-wrp">
                         <div class="feature_items text-end">
-                            <FeatureItem :contents="infos[0]" data-aos="fade-right" data-aos-delay="500"/>
-                            <FeatureItem :contents="infos[1]" data-aos="fade-right" data-aos-delay="1000"/> 
+                            <FeatureItem :contents="infos[0]" data-aos="fade-right"/>
+                            <FeatureItem :contents="infos[1]" data-aos="fade-right" data-aos-delay="200"/> 
                         </div>
                         <div class="fimg">
-                            <img :src="Fimg" alt=""/>
+                            <img :src="Fimg" alt="" data-aos="fade-in" data-aos-delay="200"/>
                         </div>
                         <div class="feature_items">
-                            <FeatureItem :contents="infos[2]" data-aos="fade-left" data-aos-delay="500"/>
-                            <FeatureItem :contents="infos[3]" data-aos="fade-left" data-aos-delay="1000"/> 
+                            <FeatureItem :contents="infos[2]" data-aos="fade-left"/>
+                            <FeatureItem :contents="infos[3]" data-aos="fade-left" data-aos-delay="200"/> 
                         </div>
                     </div>
                 </div>

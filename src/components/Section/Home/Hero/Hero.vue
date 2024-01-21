@@ -33,7 +33,7 @@
 
         <div class="container">
             <div class="row align-items-center"> 
-                <div class="col-lg-6" data-aos="fade-right" data-aos-delay="0">
+                <div class="col-lg-6">
                     <HeroContent/>
                 </div>
                 <div class="col-lg-6">

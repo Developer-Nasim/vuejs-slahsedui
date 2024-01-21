@@ -7,7 +7,7 @@ import AppStore from '../../../../assets/img/storeicons/appstore.png'
 
 </script>
 <template>
-    <div class="hero-wrp">
+    <div class="hero-wrp" data-aos="fade-right" data-aos-delay="0">
         <h1>Welcome to <br/> <span>Slashed App</span> </h1>
         <p>Lorem Ipsum is simply dummy text of the printing and setting indus orem Ipsum has been the industrys.</p>
 
