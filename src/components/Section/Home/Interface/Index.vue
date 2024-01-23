@@ -1,4 +1,7 @@
 <script setup>
+import {FadeUp} from '../../../../Helpers/Animation';
+import { onMounted, ref } from 'vue';
+
     import SectionTitle from '../../../Others/SectionTitle.vue'; 
 
     import Interface from '../../../../assets/img/interface/earnedbadge.png'
@@ -16,7 +19,13 @@
   // import required modules
   import { Pagination,Autoplay } from 'swiper/modules';
   const modules = [Pagination,Autoplay]
-  
+
+const target_for_fadeUP = ref() 
+const target_for_fadeUP2 = ref()
+onMounted(()=>{
+    FadeUp(target_for_fadeUP)
+    FadeUp(target_for_fadeUP2) 
+})  
   
 </script>
 <template>
@@ -24,7 +33,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-12 text-center">
-                    <div class="section-title" v-motion-slide-visible-bottom>
+                    <div class="section-title" ref="target_for_fadeUP">
                         <SectionTitle>
                             <h1>Beautifull <span>interface</span> </h1>
                             <p>Lorem Ipsum is simply dummy text of the printing and typese tting indus orem Ipsum has beenthe standard dummy.</p>
@@ -34,7 +43,7 @@
             </div>
         </div>
         <div class="container-fluid"> 
-            <div class="interface-wrap" v-motion-slide-visible-bottom :delay="500"> 
+            <div class="interface-wrap" ref="target_for_fadeUP2" :delay="500"> 
                 <swiper 
                     :slidesPerView="5"
                     :spaceBetween="50"

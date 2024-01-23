@@ -1,5 +1,8 @@
 <script setup>
 
+import {FadeUp,FadeIn} from '../../../../Helpers/Animation';
+import { onMounted, ref } from 'vue';
+
 import SectionTitle from '../../../Others/SectionTitle.vue';
  
 
@@ -19,6 +22,15 @@ import Testimonial_item from './Testimonial_item.vue';
   import { Pagination,Autoplay } from 'swiper/modules';
   const modules = [Pagination,Autoplay]
 
+const target_for_fadeUP = ref()
+const target_for_fadeUP2 = ref()
+const target_for_fadeIn = ref() 
+onMounted(()=>{
+    FadeUp(target_for_fadeUP)
+    FadeUp(target_for_fadeUP2)
+    FadeIn(target_for_fadeIn)
+})
+ 
 </script>
 <template>
     <section class="testimonial-section">
@@ -26,7 +38,7 @@ import Testimonial_item from './Testimonial_item.vue';
         <div class="container">
             <div class="row">
                 <div class="col-lg-12 text-center">
-                    <div class="section-title" v-motion-slide-visible-bottom> 
+                    <div class="section-title" ref="target_for_fadeUP"> 
                         <SectionTitle>
                             <h1>Trusted by <span>150+</span> companies</h1>
                             <p>Lorem Ipsum is simply dummy text of the printing and typese tting indus orem Ipsum has beenthe standard dummy.</p>
@@ -34,7 +46,7 @@ import Testimonial_item from './Testimonial_item.vue';
                     </div>
                 </div>
                 <div class="col-lg-12">
-                    <div class="testimonial-wrp" v-motion-fade-visible :delay="300">
+                    <div class="testimonial-wrp" ref="target_for_fadeIn" :delay="300">
                         <swiper 
                             :pagination="{
                                 clickable: true,
@@ -55,7 +67,7 @@ import Testimonial_item from './Testimonial_item.vue';
                                 <Testimonial_item :img="Avatar" name="Shayna John" position="Careative inc" txt="“ Lorem Ipsum is simply dummy text of the printing and typese tting us orem Ipsum has been lorem beenthe standar dummy. ”" />
                             </swiper-slide>
                         </swiper>
-                        <div class="total_reviews">
+                        <div class="total_reviews" ref="target_for_fadeUP2">
                             <div class="trvs">
                                 <div>
                                     <img :src="Star" alt="">

@@ -1,4 +1,6 @@
 <script setup>
+import {FadeUp,FadeIn} from '../../../../Helpers/Animation';
+import { onMounted, ref } from 'vue';
 
 import SectionTitle from '../../../Others/SectionTitle.vue'; 
  
@@ -59,13 +61,24 @@ const pricings = [
     }
 ]
 
+const target_for_fadeUP = ref()
+const target_for_fadeUP2 = ref() 
+const target_for_fadeUP3 = ref() 
+const target_for_fadeUP4 = ref() 
+onMounted(()=>{
+    FadeUp(target_for_fadeUP)
+    FadeUp(target_for_fadeUP2) 
+    FadeUp(target_for_fadeUP3) 
+    FadeUp(target_for_fadeUP4) 
+})
+
 </script>
 <template>
     <section class="pricing-section"> 
         <div class="container">
             <div class="row">
                 <div class="col-lg-12 text-center">
-                    <div class="section-title" v-motion-slide-visible-bottom>
+                    <div class="section-title" ref="target_for_fadeUP">
                         <SectionTitle>
                             <h1>Best & simple <span>pricing</span></h1>
                             <p>Lorem Ipsum is simply dummy text of the printing and typese tting indus orem Ipsum has beenthe standard dummy.</p>
@@ -74,13 +87,13 @@ const pricings = [
                 </div>
                 <div class="col-lg-12">
                     <div class="pricings-wrap">
-                        <div class="month_to_year" v-motion-slide-visible-bottom :delay="300"> 
+                        <div class="month_to_year" ref="target_for_fadeUP2" :delay="300"> 
                             <Switch/> 
                         </div>
-                        <div class="all-pricings">
-                            <PricingItem v-for="(price,index) in pricings" :key="index" :contents="price" v-motion-slide-visible-bottom :delay="(300 * index)"/>
+                        <div class="all-pricings" ref="target_for_fadeUP3">
+                            <PricingItem v-for="(price,index) in pricings" :key="index" :contents="price"/>
                         </div>
-                        <p  v-motion-slide-visible-bottom>Not sure what to choose ? <router-link to="#" class="gradienTxt">contact us</router-link> for custom packages</p>
+                        <p ref="target_for_fadeUP4">Not sure what to choose ? <router-link to="#" class="gradienTxt">contact us</router-link> for custom packages</p>
                     </div>
                 </div>
             </div>

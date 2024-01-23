@@ -1,6 +1,8 @@
 <script setup>
 
-import { onMounted } from 'vue';
+import {ScaleUp} from '../../../../Helpers/Animation';
+import { onMounted, ref } from 'vue';
+
     import DemoImg from '../../../../assets/img/downloadfrom.png'
     import Store from '../../../../assets/img/storeicons/appstore.png'
     import Store2 from '../../../../assets/img/storeicons/appstore.png'
@@ -22,6 +24,12 @@ const DownloadData = {
     
 }
 
+
+
+const target_for_scale = ref()  
+onMounted(()=>{
+    ScaleUp(target_for_scale) 
+})  
 
 
 onMounted(()=>{
@@ -48,7 +56,7 @@ onMounted(()=>{
         <div class="container">
             <div class="row">
                 <div class="col-lg-12">
-                    <DownloadContent :contents="DownloadData"/>
+                    <DownloadContent :contents="DownloadData" ref="target_for_scale" :delay="500"/>
                 </div>
             </div>
         </div>

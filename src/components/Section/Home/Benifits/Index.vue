@@ -1,5 +1,8 @@
 <script setup>
 
+import {FadeUp,FadeIn} from '../../../../Helpers/Animation';
+import { onMounted, ref } from 'vue';
+
 import SectionTitle from '../../../Others/SectionTitle.vue';
 import Button from '../../../Others/Button.vue';
 
@@ -59,6 +62,32 @@ const NumInfos = [
     }  
   ]
 
+const target_for_fadeUp = ref()
+const target_for_fadeUp2 = ref()
+const target_for_fadeUp3 = ref()
+const target_for_fadeUp4 = ref()
+const target_for_fadeUp5 = ref()
+ 
+
+const target_for_fadeIn = ref()
+const target_for_fadeIn2 = ref()
+const target_for_fadeIn3 = ref()
+const target_for_fadeIn4 = ref()
+
+onMounted(()=>{
+    FadeUp(target_for_fadeUp)
+    FadeUp(target_for_fadeUp2)
+    FadeUp(target_for_fadeUp3)
+    FadeUp(target_for_fadeUp4)
+    FadeUp(target_for_fadeUp5)
+ 
+
+    FadeIn(target_for_fadeIn)
+    FadeIn(target_for_fadeIn2)
+    FadeIn(target_for_fadeIn3)
+    FadeIn(target_for_fadeIn4)
+})
+
 </script>
 <template>
     <section class="benifit-section"> 
@@ -66,7 +95,7 @@ const NumInfos = [
             <div class="first-benifit-wrap"> 
                 <div class="row">
                     <div class="col-lg-6">
-                        <div class="benifit_img with_bgs" v-motion-fade-visible>
+                        <div class="benifit_img with_bgs" ref="target_for_fadeIn">
                             <img :src="BImg" alt="" class="b moving_position_animatin">
                             <img :src="BImg2" alt="" class="b2 moving_animation">
                             <img :src="BImg3" alt="" class="background">
@@ -74,14 +103,14 @@ const NumInfos = [
                     </div>
                     <div class="col-lg-6">
                         <div class="benifit_wrap">
-                            <SectionTitle v-motion-slide-visible-bottom>
+                            <SectionTitle ref="target_for_fadeUp">
                                 <h1>Daily Rewards and Coupons for <span>Slashed User</span></h1>
                                 <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry lorem Ipsum has been the industrys standard dummy text ever since the when an unknown printer took a galley of type and. Lorem ipsum dolor sit amet.</p>
                             </SectionTitle>
-                            <div class="benifit_wrap_nums_info" v-motion-fade-visible :delay="300">
+                            <div class="benifit_wrap_nums_info" ref="target_for_fadeIn2" :delay="300">
                                 <NumItem v-for="(Info, i) in NumInfos" :key="i" :content="Info"/>  
                             </div>
-                            <Button href="#" txt="START FREE TRIAL"  v-motion-fade-visible :delay="600"/>
+                            <Button href="#" txt="START FREE TRIAL" ref="target_for_fadeIn3" :delay="600"/>
                         </div>
                     </div> 
                 </div>
@@ -90,21 +119,21 @@ const NumInfos = [
                 <div class="row">
                     <div class="col-lg-6">
                         <div class="benifit_wrap"> 
-                            <div v-motion-slide-visible-bottom> 
+                            <div ref="target_for_fadeUp2"> 
                                 <SectionTitle>
                                     <h1>Beautiful design with <span>modern UI</span></h1>
                                     <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry lorem Ipsum has been the industrys standard dummy text ever since the when an unknown printer took a galley of type and. Lorem ipsum dolor sit amet.</p>
                                 </SectionTitle>
                             </div>
                             <div class="benifit_lists"> 
-                                <InfoItem :content="ListInfos[0]" v-motion-slide-visible-bottom :delay="300"/> 
-                                <InfoItem :content="ListInfos[1]" v-motion-slide-visible-bottom :delay="600"/> 
-                                <InfoItem :content="ListInfos[2]" v-motion-slide-visible-bottom :delay="900"/> 
+                                <InfoItem :content="ListInfos[0]" ref="target_for_fadeUp3" :delay="300"/> 
+                                <InfoItem :content="ListInfos[1]" ref="target_for_fadeUp4" :delay="600"/> 
+                                <InfoItem :content="ListInfos[2]" ref="target_for_fadeUp5" :delay="900"/> 
                             </div> 
                         </div>
                     </div> 
                     <div class="col-lg-6">
-                        <div class="benifit_img with_out_bg" v-motion-fade-visible>
+                        <div class="benifit_img with_out_bg" ref="target_for_fadeIn4">
                             <img :src="BImg4" alt="" class="b moving_position_animatin">
                             <img :src="BImg5" alt="" class="b2 moving_animation"> 
                         </div>

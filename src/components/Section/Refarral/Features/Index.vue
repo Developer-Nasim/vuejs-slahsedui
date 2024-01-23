@@ -1,4 +1,6 @@
 <script setup>
+import {FadeUp,FadeLeft,FadeRight,FadeIn} from '../../../../Helpers/Animation';
+import { onMounted, ref } from 'vue';
 
 import SectionTitle from '../../../Others/SectionTitle.vue';
 import Icon from '../../../../assets/img/icons/benifits/icon.png'
@@ -31,7 +33,20 @@ const infos = [
     }
 ]
 
- 
+const target_for_fadeUp = ref()
+const target_for_fadeLeft2 = ref()
+const target_for_fadeLeft = ref()
+const target_for_fadeRight = ref()
+const target_for_fadeRight2 = ref()
+const target_for_fadeIn = ref()
+onMounted(()=>{
+    FadeUp(target_for_fadeUp)
+    FadeLeft(target_for_fadeLeft)
+    FadeLeft(target_for_fadeLeft2)
+    FadeRight(target_for_fadeRight)
+    FadeRight(target_for_fadeRight2)
+    FadeIn(target_for_fadeIn)
+})
 
 </script>
 <template>
@@ -39,12 +54,7 @@ const infos = [
         <div class="container-fluid">
             <div class="row">
                 <div class="col-lg-12 text-center">
-                    <div class="section-title"
-                        v-motion
-                        :initial="{y: 100,opacity: 0}"
-                        :visible="{y: 0,opacity: 1}" 
-                        :duration="1600"
-                    > 
+                    <div class="section-title" ref="target_for_fadeUp"> 
                         <SectionTitle>
                             <h1>Referral Program <span>Benefits</span></h1>
                             <p>Lorem Ipsum is simply dummy text of the printing and typese tting indus orem Ipsum has beenthe standard dummy.</p>
@@ -54,15 +64,15 @@ const infos = [
                 <div class="col-lg-12">
                     <div class="features-wrp">
                         <div class="feature_items text-end">
-                            <FeatureItem :contents="infos[0]" v-motion-slide-visible-left :duration="3000" />
-                            <FeatureItem :contents="infos[1]" v-motion-slide-visible-left :duration="3000" :delay="500"/> 
+                            <FeatureItem :contents="infos[0]" ref="target_for_fadeLeft"/> 
+                            <FeatureItem :contents="infos[1]" ref="target_for_fadeLeft2" :delay="500"/> 
                         </div>
                         <div class="fimg">
-                            <img :src="Fimg" alt="" v-motion-fade-visible :delay="500" />
+                            <img :src="Fimg" alt="" ref="target_for_fadeIn" :delay="500"/>
                         </div>
                         <div class="feature_items">
-                            <FeatureItem :contents="infos[2]" v-motion-slide-visible-right :duration="3000"/>
-                            <FeatureItem :contents="infos[3]" v-motion-slide-visible-right :duration="3000" :delay="500"/> 
+                            <FeatureItem :contents="infos[2]" ref="target_for_fadeRight"/>
+                            <FeatureItem :contents="infos[3]" ref="target_for_fadeRight2" :delay="500"/> 
                         </div>
                     </div>
                 </div>

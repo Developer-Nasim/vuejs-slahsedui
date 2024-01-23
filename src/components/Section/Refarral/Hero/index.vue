@@ -1,10 +1,19 @@
 <script setup> 
+import {FadeLeft,FadeIn} from '../../../../Helpers/Animation';
+import { onMounted, ref } from 'vue';
+
     import HeroContent from './HeroContent.vue';
     import Ovarlay from '../../../../assets/img/ovarlay.png'  
     
     import Hero from '../../../../assets/img/hero2.png' 
     import Anim from '../../../Others/Anim.vue'
  
+const target_for_fadeLeft = ref()
+const target_for_fadeIn = ref()
+onMounted(()=>{
+    FadeLeft(target_for_fadeLeft)
+    FadeIn(target_for_fadeIn)
+})
 
 </script>
 <template>
@@ -15,13 +24,13 @@
         <div class="container">
             <div class="row align-items-center"> 
                 <div class="col-lg-6">
-                    <div v-motion-slide-left>
+                    <div ref="target_for_fadeLeft">
                     <HeroContent/>
                     </div>  
                 </div>
                 <div class="col-lg-6">
                     <div class="hero-wrp">
-                        <div class="hero-img-content" v-motion-fade-visible>  
+                        <div class="hero-img-content" ref="target_for_fadeIn">  
                             <img :src="Hero" alt="">
                         </div>
                     </div>

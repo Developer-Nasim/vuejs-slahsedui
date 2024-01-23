@@ -1,4 +1,7 @@
 <script setup>
+import {FadeUp} from '../../../../Helpers/Animation';
+import { onMounted, ref } from 'vue';
+
 import Dashboard from '../../../Layouts/Dashboard.vue'
 import Button from '../../../Others/Button.vue'
 import CopyToClipBoard from '../../../Others/CopyToClipboard.vue'
@@ -9,8 +12,7 @@ import Arrow from '../../../../assets/img/dashboard/arrow-right.png'
 import Discount from '../../../../assets/img/dashboard/discount.png'
 import Warning from '../../../../assets/img/dashboard/warning.png'
 import BenifitSIdeBar from './BenifitSIdeBar.vue'
-import UItem from './UItem.vue'
-import { ref } from 'vue'
+import UItem from './UItem.vue' 
 import Progress from '../../../Others/Progress.vue'
 
 let Status = ref('pending')
@@ -67,14 +69,18 @@ function HandleSideBar() {
     const sideBar = document.querySelector('.benifit-sidebar')
     sideBar.classList.toggle('active')
 }
-
+ 
+const target_for_fade_up = ref() 
+onMounted(()=>{ 
+    FadeUp(target_for_fade_up) 
+})  
 </script>
 <template>
 
     <Dashboard>
         <div class="row">
             <div class="col-lg-12">
-                <div class="referrs-wrap" v-motion-slide-bottom>
+                <div class="referrs-wrap" ref="target_for_fade_up">
                     <div class="referrs-contents left">
                         <div class="reffers-title"> 
                             <h5>Invite & Earn</h5>

@@ -16,7 +16,7 @@ let showIframe= ref(false)
 
 </script>
 <template>
-    <div class="watch_video" v-motion-slide-visible-bottom :delay="1200">
+    <div class="watch_video">
         <img :src="bgImg" alt=""/>
         <div class="watch_video_wrp"> 
             <button type="button" data-bs-toggle="modal" data-bs-target="#staticBackdrop" @click="showIframe = true"><img :src="PlayIcon" alt=""></button>

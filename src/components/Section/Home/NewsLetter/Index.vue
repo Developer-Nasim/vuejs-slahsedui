@@ -1,4 +1,11 @@
 <script setup>
+import {ScaleUp} from '../../../../Helpers/Animation';
+import { onMounted, ref } from 'vue';
+const target_for_scale = ref()  
+onMounted(()=>{
+    ScaleUp(target_for_scale) 
+})  
+
 
  
 </script>
@@ -7,7 +14,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-12">
-                    <div class="news-letter-wraps" v-motion-pop-visible>
+                    <div class="news-letter-wraps" ref="target_for_scale" :delay="500">
                         <div>
                             <h1>Subscribe newsletter</h1>
                             <p>Be the first to recieve all latest post in your inbox</p>

@@ -1,5 +1,8 @@
 <script setup>
 
+import {FadeUp} from '../../../../Helpers/Animation';
+import { onMounted, ref } from 'vue';
+
 import SectionTitle from '../../../Others/SectionTitle.vue'; 
 import BlogImg from '../../../../assets/img/blog2.png'
 import BlogImg2 from '../../../../assets/img/blog.png'
@@ -28,13 +31,20 @@ import BlogItem from './BlogItem.vue';
     }
   ]
 
+const target_for_fade_up_heading = ref()
+const target_for_fade_up = ref() 
+onMounted(()=>{
+    FadeUp(target_for_fade_up_heading)
+    FadeUp(target_for_fade_up) 
+})  
+
 </script>
 <template>
     <section class="blog-section"> 
         <div class="container">
             <div class="row">
                 <div class="col-lg-12 text-center">
-                    <div class="section-title" v-motion-slide-visible-bottom>
+                    <div class="section-title" ref="target_for_fade_up">
                         <SectionTitle>
                             <h1>Read latest <span>story</span></h1>
                             <p>Lorem Ipsum is simply dummy text of the printing and typese tting indus orem Ipsum has beenthe standard dummy.</p>
@@ -42,8 +52,8 @@ import BlogItem from './BlogItem.vue';
                     </div>
                 </div>
             </div>
-                <div class="row">
-                    <div class="col-lg-4 col-md-6"  v-for="(blog,i) in Blogs" :key="i" v-motion-slide-visible-bottom :delay="(300 * i)">
+                <div class="row" ref="target_for_fade_up" :delay="500">
+                    <div class="col-lg-4 col-md-6"  v-for="(blog,i) in Blogs" :key="i">
                         <BlogItem :content="blog"/>
                     </div> 
                 </div>

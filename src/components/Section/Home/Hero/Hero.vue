@@ -1,4 +1,7 @@
 <script setup> 
+import {FadeLeft} from '../../../../Helpers/Animation';
+import { onMounted, ref } from 'vue';
+
     import Ovarlay from '../../../../assets/img/ovarlay.png' 
     import Frame from '../../../../assets/img/icons/frame.png'
     
@@ -24,6 +27,10 @@
   const modules = [Pagination,Autoplay]
 
 
+const target_for_fadeLeft = ref()
+onMounted(()=>{
+    FadeLeft(target_for_fadeLeft)
+})
 </script>
 <template>
     <section class="hero-section">
@@ -34,7 +41,7 @@
         <div class="container">
             <div class="row align-items-center"> 
                 <div class="col-lg-6">
-                    <div v-motion-slide-left>
+                    <div ref="target_for_fadeLeft">
                         <HeroContent/> 
                     </div>
                 </div>
